@@ -132,7 +132,7 @@ module.exports = function (app, Competition, Log, User) {
       code: req.body.comp_code,
     });
 
-    comp.status === "voting";
+    comp.status = "voting";
     await comp.save();
 
     return res.json({
